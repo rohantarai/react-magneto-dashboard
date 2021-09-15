@@ -1,0 +1,58 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jest/recommended"],
+  "rules": {
+    "require-await": "error",
+    "no-empty-function": "error",
+    "no-eq-null": "error",
+    "eqeqeq": "error",
+    "no-invalid-this": "error",
+    "no-return-await": "error",
+    "no-use-before-define": "warn",
+    "no-confusing-arrow": "error",
+    "no-duplicate-imports": "error",
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "no-await-in-loop": "error",
+    "default-case": "error",
+    "no-useless-return": "error",
+    "handle-callback-err": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "react/no-this-in-sfc": "error",
+    "react/no-array-index-key": "error",
+    "react/react-in-jsx-scope": "off",
+    "xss/no-mixed-html": [
+      2,
+      {
+        "htmlVariableRules": ["AsHtml", "HtmlEncoded/i", "^html$"],
+        "htmlFunctionRules": [".asHtml/i", "toHtml"],
+        "functions": {
+          "$": {
+            "htmlInput": true,
+            "safe": ["document", "this"]
+          },
+          ".html": {
+            "htmlInput": true,
+            "htmlOutput": true
+          },
+          ".join": {
+            "passthrough": {
+              "obj": true,
+              "args": true
+            }
+          }
+        }
+      }
+    ],
+    "xss/no-location-href-assign": [
+      2,
+      {
+        "escapeFunc": "escapeHref"
+      }
+    ]
+  },
+  "parserOptions": { "sourceType": "module", "ecmaVersion": 2021, "ecmaFeatures": { "jsx": true } },
+  "env": { "browser": true, "es6": true, "node": true, "amd": true, "jest/globals": true },
+  "plugins": ["react", "react-hooks", "xss", "jest"]
+}
