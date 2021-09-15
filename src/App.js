@@ -25,7 +25,7 @@ function App() {
         responseType: 'blob', // Important
       })
       .then((response) => {
-        jsFileDownload(response.data, 'CRF.xlsx');
+        jsFileDownload(response.data, 'react_template.xlsx');
       });
   };
 
