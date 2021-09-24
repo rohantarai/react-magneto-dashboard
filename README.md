@@ -1,5 +1,7 @@
 # React Magneto Dashboard
 
+![magneto](https://user-images.githubusercontent.com/16543074/134718048-62cc4b45-4133-4031-b164-ff219f9dd17b.gif)
+
 ## Setup
 * Clone the repository
 * Open `cmd` inside the cloned repository
